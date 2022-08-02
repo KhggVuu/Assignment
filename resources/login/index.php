@@ -1,32 +1,4 @@
-<?php
-require_once("../../../connection/conectdb.php");
-?> 
 
-<?php
-    if (isset($_POST['login'])) {
-        try {
-            $sql = "select * from admin where adminID = ? and adminPwd = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bindParam(1,$_POST['adminID']);
-            $stmt->bindParam(2,$_POST['adminPwd']);
-            $stmt->execute();
-            $row = $stmt->fetch();
-            if ($row == FALSE) {
-                echo 'Invalid admin id or password!';
-            }
-            else {
-                session_start();
-                $_SESSION['adminID'] = $row['adminID'];
-                $_SESSION['adminFullname'] = $row['fullname'];
-                $_SESSION['adminEmail'] = $row['email'];
-                $_SESSION['adminPhoto'] = $row['adminPhoto'];
-                header('Location: ../../admin_index.php');
-            }
-        } catch (PDOException $ex) {
-            echo 'Error '. $ex->getMessage();
-        }
-    }
-?>
 <!doctype html>
 <html lang="en">
   <head>
