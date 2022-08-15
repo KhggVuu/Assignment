@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use  App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +37,8 @@ Route::get('/checkout', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('P-list', [ProductController::class, 'index']);
 
 Auth::routes();
 
