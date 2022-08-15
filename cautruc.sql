@@ -2,7 +2,7 @@ create database Asm191;
 
 use Asm191;
 
-create table categorys
+create table categories
 (
 	categoryID nvarchar(5) not null primary key,
     categoryName nvarchar(50) not null
