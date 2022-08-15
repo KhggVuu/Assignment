@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Product-in Store</title>
+        <title>Product- in Store</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -33,7 +33,11 @@
     <div class="container" style="margin-top: 20px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Product List</h2>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a href="{{ url('admin/dashboard')}}" class="text-decoration-none">
+                        <h2><span>Product List</span></h2>
+                    </a>
+                </div>
 
                 @if (Session::has('success'))
                     <div class="alert alert-success" role="alert">
@@ -63,6 +67,7 @@
                                         style="height: 90px; width:90px"
                                         title="{{$row->productDetails}}"></a>
                                 </td>
+                                <td>{{$row->productDetails}}</td>
                                 <td>{{$row->producerName}}</td>
                                 <td>
                                     <a href="{{url('edit/'. $row->productID)}}" class="btn btn-success">Edit</a>

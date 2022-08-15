@@ -10,7 +10,7 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"><a href="{{url('P-list')}}" class="nav-link">Product</a></li>
-            <li class="nav-item"><a href="{{url('x')}}" class="nav-link">Add new</a></li>
+            <li class="nav-item"><a href="{{url('A-product')}}" class="nav-link">Add new</a></li>
           </ul>
         </div>
       </li>

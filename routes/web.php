@@ -40,6 +40,16 @@ Route::get('/contact', function () {
 
 Route::get('P-list', [ProductController::class, 'index']);
 
+Route::get('A-product', [ProductController::class, 'AddProduct']);
+
+Route::post('save', [ProductController::class, 'SaveProduct']);
+
+Route::get('edit/{id}', [ProductController::class, 'edit']);
+
+Route::post('update', [ProductController::class, 'update']);
+
+Route::get('delete/{id}', [ProductController::class, 'delete']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
