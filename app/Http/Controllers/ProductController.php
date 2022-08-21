@@ -93,5 +93,4 @@ class ProductController extends Controller
             return redirect()->back()->with('success', 'Product removed successfully!');
         }
 
-
 }

@@ -35,10 +35,10 @@
             <div class="col-md-12">
                 <div class="col-lg-3 d-none d-lg-block">
                     <a href="{{ url('admin/dashboard')}}" class="text-decoration-none">
-                        <h2><span>Product List</span></h2>
+                        <h2><span>Product List</span>
+                        </h2>
                     </a>
                 </div>
-
                 @if (Session::has('success'))
                     <div class="alert alert-success" role="alert">
                         {{Session::get('success')}}
