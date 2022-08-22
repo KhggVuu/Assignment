@@ -63,7 +63,7 @@
                                 <td>{{$row->productName}}</td>
                                 <td>{{$row->productPrice}}</td>
                                 <td>
-                                    <a href=""><img src="public/image/{{$row->productImage1}}"
+                                    <a href=""><img src="img/{{$row->productImage1}}"
                                         style="height: 90px; width:90px"
                                         title="{{$row->productDetails}}"></a>
                                 </td>
